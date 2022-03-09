@@ -1,0 +1,41 @@
+.app-toolbar {
+  position: sticky;
+  position: -webkit-sticky;
+  top: 0;
+  background-image: linear-gradient(to right, #243949 0%, #517fa4 100%);
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo > img {
+  height: 35px;
+  margin-left: 2em;
+}
+
+.logo-txt {
+  padding-left: 7px;
+  display: flex;
+  flex-direction: column;
+}
+
+.logo-txt h1,
+.logo-txt span {
+  margin: 0;
+  padding: 0;
+  line-height: 1;
+  letter-spacing: 4px;
+}
+
+.logo-txt h1 {
+  font-weight: bolder;
+  font-size: 1rem;
+  margin-top: 2px;
+}
+
+.logo-txt span {
+  font-weight: lighter;
+  font-size: 0.75rem;
+}

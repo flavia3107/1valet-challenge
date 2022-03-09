@@ -4,7 +4,8 @@
   box-sizing: border-box;
   display: flex;
   gap: 30px;
-  background-color: aliceblue;
+  max-height: 720px;
+
   .search-container,
   .device-container {
     flex-direction: row;
@@ -12,7 +13,6 @@
     display: flex;
     place-content: center space-around;
     align-items: center;
-    background-color: beige;
   }
 
   .search-container {
@@ -25,6 +25,7 @@
     .devices-list,
     .device-details {
       height: 100%;
+      overflow-y: auto;
       flex-direction: column;
       box-sizing: border-box;
       display: flex;
@@ -34,11 +35,15 @@
     }
 
     .devices-list {
-      background-color: cadetblue;
     }
 
     .device-details {
       background-color: cornflowerblue;
     }
+  }
+
+  app-devices {
+    height: 100%;
+    width: 100%;
   }
 }

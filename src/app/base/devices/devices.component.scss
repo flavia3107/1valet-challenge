@@ -1,0 +1,41 @@
+.devices-container {
+  width: 90%;
+  margin: auto;
+
+  .device-desc, 
+  .title {
+    background-color: rgba(216, 225, 255, 0.53);
+    margin-top: 15px;
+    padding: 15px 0px;
+    border-bottom: 1px solid #cacaca;
+    border-top: 1px solid #cacaca;
+
+    .icon{
+      font-size: 44px;
+      margin: 0 50px 20px 10px;
+    }
+
+    .desc{
+      display: flex;
+      flex-flow: column;
+
+      .device-name{
+        font-size: 27px;
+        margin-top: 13px;
+        line-height: 32px;
+        color: #444444;
+      }
+
+      .device-status{
+        color: #7e7e7e;
+        font-size: 16px;
+      }
+    }
+  }
+
+  .title {
+    font-size: 34px;
+    padding: 26px 30px;
+    font-weight: 600;
+  }
+}

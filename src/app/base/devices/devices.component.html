@@ -1,17 +1,15 @@
-<mat-list role="list">
-  <mat-list-item role="listitem">Item 1</mat-list-item>
-  <!-- <mat-list-item role="listitem">Item 2</mat-list-item>
-  <mat-list-item role="listitem">Item 3</mat-list-item>
-  <mat-list-item role="listitem">Item 1</mat-list-item>
-  <mat-list-item role="listitem">Item 2</mat-list-item>
-  <mat-list-item role="listitem">Item 3</mat-list-item>
-  <mat-list-item role="listitem">Item 1</mat-list-item>
-  <mat-list-item role="listitem">Item 2</mat-list-item>
-  <mat-list-item role="listitem">Item 3</mat-list-item>
-  <mat-list-item role="listitem">Item 1</mat-list-item>
-  <mat-list-item role="listitem">Item 2</mat-list-item>
-  <mat-list-item role="listitem">Item 3</mat-list-item>
-  <mat-list-item role="listitem">Item 1</mat-list-item>
-  <mat-list-item role="listitem">Item 2</mat-list-item>
-  <mat-list-item role="listitem">Item 3</mat-list-item> -->
-</mat-list>
+<div class="devices-container">
+  <p class="title"> Related Devices</p>
+
+  <mat-list role="list">
+    <mat-list-item class="device-desc" *ngFor="let device of devicesList">
+      <mat-icon class="icon">
+        {{device.device_type === 'mobile' ? 'smartphone' : device.device_type === 'computer' ? 'tv' :'tablet_mac'}}
+      </mat-icon>
+      <p class="desc">
+        <span class="device-name"> {{ device.device_name }}</span>
+        <span class="device-status">Status: {{ device.device_status }}</span>
+      </p>
+    </mat-list-item>
+  </mat-list>
+</div>

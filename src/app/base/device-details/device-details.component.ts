@@ -13,7 +13,7 @@ export class DeviceDetailsComponent implements OnInit {
   type: ChartType = ChartType.ColumnChart;
   data = [];
   options = {
-    colors: ['#e0440e', '#e6693e', '#ec8f6e', '#f3b49f', '#f6c7b6'], is3D: true
+    colors: ['#9eb5ff', '#b3c5ff', '#c2d0ff', '#cfdaff', '#d6dfff', '#dce4ff'], is3D: true
   };
 
   width = 550;

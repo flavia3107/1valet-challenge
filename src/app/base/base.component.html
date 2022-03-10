@@ -1,10 +1,10 @@
 <div class="container">
   <div class="search-container">
     <mat-form-field appearance="outline">
-      <input matInput placeholder="Placeholder">
+      <mat-icon matPrefix>search</mat-icon>
+      <input matInput placeholder="Search">
     </mat-form-field>
-
-    <button mat-button>Cancel</button>
+    <button class="cancel-button" mat-button>Cancel</button>
   </div>
 
   <div class="device-container">
@@ -12,6 +12,7 @@
       <app-devices (deviceSelected)="selectedItem = $event" [devicesList]="devices"></app-devices>
     </div>
     <div class="device-details">
+      <p *ngIf="!selectedItem">Select one of the devices</p>
       <app-device-details *ngIf="selectedItem" [selectedItem]="selectedItem"></app-device-details>
     </div>
   </div>

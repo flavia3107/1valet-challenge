@@ -1,0 +1,30 @@
+.container{
+  flex-direction: column;
+  box-sizing: border-box;
+  display: flex;
+  gap: 30px;
+
+  .title{
+    height: 80px;
+    flex-direction: row;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    background-color: rgba(216, 225, 255, 0.53);
+    border-bottom: 1px solid #cacaca;
+    border-top: 1px solid #cacaca;
+    font-size: 30px;
+    padding: 18px 30px;
+    font-weight: 500;
+  }
+
+  .graph-container{
+    p{
+       margin: 0 0px 5px 20px;
+       font-size: 18px;
+    }
+}
+}
+
+
+

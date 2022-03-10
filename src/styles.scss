@@ -1,7 +1,7 @@
 /* You can add global styles to this file, and also import other style files */
 
 html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+body { margin: 0; font-family:  sans-serif; }
 
 
 .mat-form-field > .mat-form-field-wrapper > .mat-form-field-flex > .mat-form-field-outline,
@@ -15,4 +15,28 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 
 .mat-form-field > .mat-form-field-wrapper > .mat-form-field-flex >.mat-form-field-infix {
       padding: 0.5em 0;
+}
+
+
+::-webkit-scrollbar {
+  height: 9px;
+  width: 9px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(216, 225, 255, 0.64);
+  width: 9px;
+}
+
+::-webkit-scrollbar-track {
+  background: white;
+  width: 9px;
+}
+::-webkit-scrollbar-corner {
+  background: white;
+}
+
+.mat-paginator-container {
+  background-color: white;
+  font-size: 14px;
 }

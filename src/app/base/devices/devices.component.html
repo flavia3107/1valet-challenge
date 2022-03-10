@@ -2,7 +2,7 @@
   <p class="title"> Related Devices</p>
 
   <mat-list role="list">
-    <mat-list-item class="device-desc" *ngFor="let device of devicesList">
+    <mat-list-item class="device-desc" *ngFor="let device of devicesList" (click)="handleEvent(device)">
       <mat-icon class="icon">
         {{device.device_type === 'mobile' ? 'smartphone' : device.device_type === 'computer' ? 'tv' :'tablet_mac'}}
       </mat-icon>

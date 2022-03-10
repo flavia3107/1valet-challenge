@@ -10,6 +10,8 @@ import { DeviceService } from './device.service';
 })
 export class BaseComponent implements OnInit, OnDestroy {
   devices: Device[] = [];
+  selectedItem: Device;
+
   private _unsubscribe = new Subject();
   constructor(private deviceService: DeviceService) { }
 
@@ -21,7 +23,7 @@ export class BaseComponent implements OnInit, OnDestroy {
     this.deviceService.getData().pipe(
       takeUntil(this._unsubscribe),
       tap(devices => this.devices = devices)
-    ).subscribe();
+    ).subscribe(e => console.log('ee', this.devices));
   }
 
   ngOnDestroy() {

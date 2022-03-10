@@ -2,3 +2,17 @@
 
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+
+.mat-form-field > .mat-form-field-wrapper > .mat-form-field-flex > .mat-form-field-outline,
+.mat-form-field:hover > .mat-form-field-wrapper > .mat-form-field-flex > .mat-form-field-outline  {
+    display: none;
+}
+
+.mat-form-field >  .mat-form-field-wrapper {
+    padding-bottom: 0 ;
+}
+
+.mat-form-field > .mat-form-field-wrapper > .mat-form-field-flex >.mat-form-field-infix {
+      padding: 0.5em 0;
+}

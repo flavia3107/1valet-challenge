@@ -11,9 +11,9 @@ export interface Device {
 export interface Details {
     year: string,
     europe: number,
-    namerica: number,
+    north_america: number,
     asia: number,
-    lamerica: number,
-    meast: number,
+    latino_america: number,
+    middle_east: number,
     africa: number
 }

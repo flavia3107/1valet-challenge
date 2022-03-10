@@ -17,6 +17,16 @@
 
   .search-container {
     height: 100px;
+    padding: 15px 0;
+    background-color: rgba(216, 225, 255, 0.53);
+    width: 95%;
+    margin: auto;
+    margin-top: 30px;
+
+    .mat-form-field{
+      width: 75%;
+      background-color: white;
+    }
   }
 
   .device-container {
@@ -38,7 +48,6 @@
     }
 
     .device-details {
-      background-color: cornflowerblue;
     }
   }
 

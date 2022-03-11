@@ -10,8 +10,9 @@ import { DeviceService } from './device.service';
 })
 export class BaseComponent implements OnInit, OnDestroy {
   devices: Device[] = [];
+  allDevices: Device[] = [];
   selectedItem: Device;
-
+  searchInput: string;
   private _unsubscribe = new Subject();
   constructor(private deviceService: DeviceService) { }
 
@@ -22,8 +23,18 @@ export class BaseComponent implements OnInit, OnDestroy {
   getData() {
     this.deviceService.getData().pipe(
       takeUntil(this._unsubscribe),
-      tap(devices => this.devices = devices)
-    ).subscribe(e => console.log('ee', this.devices));
+      tap(devices => this.devices = this.allDevices = devices)
+    ).subscribe();
+  }
+
+  searchDevices(input) {
+    this.devices = input ? this.devices.filter(device =>
+      device.device_name.toLowerCase().includes(input.toLowerCase())) : this.allDevices;
+  }
+
+  clearSearch() {
+    this.searchInput = '';
+    this.devices = this.allDevices;
   }
 
   ngOnDestroy() {

@@ -2,9 +2,10 @@
   <div class="search-container">
     <mat-form-field appearance="outline">
       <mat-icon matPrefix>search</mat-icon>
-      <input matInput placeholder="Search">
+      <input matInput [(ngModel)]="searchInput" (ngModelChange)="searchDevices($event)" placeholder="Search"
+        [disabled]="!!selectedItem">
     </mat-form-field>
-    <button class="cancel-button" mat-button>Cancel</button>
+    <button [disabled]="!!selectedItem" class="cancel-button" (click)="clearSearch()" mat-button>Cancel</button>
   </div>
 
   <div class="device-container">
@@ -13,7 +14,8 @@
     </div>
     <div class="device-details">
       <p *ngIf="!selectedItem">Select one of the devices</p>
-      <app-device-details *ngIf="selectedItem" [selectedItem]="selectedItem"></app-device-details>
+      <app-device-details *ngIf="selectedItem" (closeDetails)="selectedItem = null" [selectedItem]="selectedItem">
+      </app-device-details>
     </div>
   </div>
 </div>

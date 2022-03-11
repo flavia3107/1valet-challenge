@@ -1,4 +1,4 @@
-import { Component, Input, OnInit, SimpleChange, SimpleChanges } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output, SimpleChange, SimpleChanges } from '@angular/core';
 import { ChartType } from 'angular-google-charts';
 import { Device } from 'src/assets/device-model';
 
@@ -19,8 +19,10 @@ export class DeviceDetailsComponent implements OnInit {
   width = 550;
   height = 400;
 
-
   @Input() selectedItem: Device;
+  @Output() closeDetails: EventEmitter<boolean> = new EventEmitter<boolean>();
+
+
   constructor() { }
 
   ngOnInit() {
@@ -42,6 +44,11 @@ export class DeviceDetailsComponent implements OnInit {
     value.forEach(val => {
       this.data.push(Object.values(val));
     });
+  }
+
+
+  closeDescription() {
+    this.closeDetails.emit(true);
   }
 
   ngOnDestroy() { }
